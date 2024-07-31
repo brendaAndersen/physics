@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import { Label } from "./../../components/ui/label";
-import { Input } from "./../../components/ui/input";
+// import { Label } from "./../../components/ui/label";
+// import { Input } from "./../../components/ui/input";
 import { Button } from "../../components/ui/button";
 import { useForm } from "react-hook-form"
 import { z } from "zod";
@@ -35,7 +35,7 @@ export function SignIn() {
     <>
       <Helmet title="Login" />
       <div className="p-8">
-        <Button variant="ghost" asChild className="absolute right-8 top-8">
+        <Button variant="link" asChild className="text-sky-500 hover:text-sky-700 absolute right-8 top-8">
           <Link to="/sign-up">
             New user
           </Link>

@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
-import { Label } from "./../../components/ui/label";
-import { Input } from "./../../components/ui/input";
+// import { Label } from "./../../components/ui/label";
+// import { Input } from "./../../components/ui/input";
 import { Button } from "../../components/ui/button";
 import { useForm } from "react-hook-form"
 import { z } from "zod";
 import { toast } from "sonner";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const signUpForm = z.object({
     name: z.string(),
@@ -16,27 +16,28 @@ type SignUpForm = z.infer<typeof signUpForm>
 
 export function SignUp() {
   const { register, handleSubmit, formState: { isSubmitting }} = useForm<SignUpForm>();
-  
+  const navigate = useNavigate();
+
   async function handleSignUp(data: SignUpForm){
     try{
       console.log(data)
       await new Promise((resolve) => setTimeout(resolve, 2000));
   
-      toast.success('An email with a auth link was send to you!', {
+      toast.success('User registered!', {
         action: {
           label: "Resend",
-          onClick: () => handleSignUp(data)
+          onClick: () => navigate('sign-in')
         },
       })
     } catch(err){
-      toast.error("Invalid auth")
+      toast.error("Error registering the user")
     }
   }
   return (
     <>
       <Helmet title="Cadastro" />
-      <div className="p-8">
-      <Button variant="ghost" asChild className="absolute right-8 top-8">
+      <div className="grid gap-40 p-8">
+        <Button variant="ghost" asChild className="absolute right-8">
           <Link to="/sign-in">
           Fazer login
           </Link>

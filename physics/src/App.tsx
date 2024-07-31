@@ -6,7 +6,7 @@ import { Toaster } from "sonner";
 function App() {
   return (
     <HelmetProvider>
-      <Helmet title="%s | physics" />
+      <Helmet title="%s | physis" />
       <Toaster richColors />
       <RouterProvider router={router} />
     </HelmetProvider>

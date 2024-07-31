@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet-async";
+import { CardStyled } from "../../components/CardStyled";
 
 export function Dashboard() {
   return (
     <>
       <Helmet title="Dashboard" />
-      <h1>Dashboard</h1>
+      <CardStyled />      
     </>
   );
 }

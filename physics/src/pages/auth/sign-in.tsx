@@ -35,7 +35,7 @@ export function SignIn() {
     <>
       <Helmet title="Login" />
       <div className="p-8">
-        <Button variant="outline" asChild className="absolute right-8 top-8">
+        <Button variant="ghost" asChild className="absolute right-8 top-8">
           <Link to="/sign-up">
             New user
           </Link>
@@ -50,10 +50,29 @@ export function SignIn() {
           {/* Higher-order function */}
           <form onSubmit={handleSubmit(handleSignIn)} action="" className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Your e-mail</Label>
-              <Input {...register("email")} id="email" type="email"></Input>
+             <div className="relative z-0 w-full mb-5 group">
+            <input
+              {...register("email")}
+              name="email"
+              type="email"
+              id="email"
+              className="block py-2.5 px-0 w-full text-sm  bg-transparent 
+          border-0 border-b-2 appearance-none text-white 
+          border-gray-600 dark:focus:border-violet-250 focus:outline-none 
+          focus:ring-0 focus:border-violet-250 peer font-thin
+          "
+              placeholder=" "
+              required
+            />
+            <label
+              className="text-violet-250 font-bold 
+          peer-focus:font-medium absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-violet-250 peer-focus:dark:text-violet-250 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 text-bold"
+            >
+              E-mail
+            </label>
             </div>
-            <Button disabled={isSubmitting} type="submit">Login</Button>
+            </div>
+            <Button disabled={isSubmitting} className="bg-sky-500 hover:bg-sky-700" type="submit">Login</Button>
           </form>
         </div>
       </div>

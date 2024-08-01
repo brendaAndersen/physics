@@ -46,7 +46,7 @@ export function SignUp() {
           <div className="flex flex-col gap-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">Sign Up</h1>
             <p className="text-muted-foreground text-sm">
-              Create account
+              Create account and sapere aude!
             </p>
           </div>
 

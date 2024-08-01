@@ -15,10 +15,11 @@ const descriptions = ["A Mecânica Clássica se refere às três principais form
 
 export const CardStyled = () => {
     return (
-        <div className="grid grid-cols-2 gap-6 cursor-pointer">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 desktop:grid-cols-3 gap-6 cursor-pointer">
             { titles.map((title, index) => {
                 return (
-                <Card key={index} className="transform  rounded-xl shadow-xl transition duration-300 hover:scale-105 border-[#319ed6] bg-[#1e293b] text-slate-500 w-[500px] h-min-[600px]">
+                <Card key={index} className="absolutetransform small:h-[350px] small:w-[300px] rounded-xl shadow-xl transition duration-300 hover:scale-105
+                border-[#319ed6] bg-[#1e293b] text-slate-500 w-[500px] lg:h-[300px] lg:w-[400px] md:h-min-[600px] text-justify">
                     <CardHeader className="">
                         <CardTitle className="text-[#319ed6]">{title}</CardTitle>
                     </CardHeader>

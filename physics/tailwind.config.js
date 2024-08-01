@@ -15,6 +15,19 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+      colors: {
+        transparent: 'transparent',
+        black: '#000',
+        white: '#808080',
+        gray: {
+          100: '#f7fafc',
+          900: '#1a202c',
+        },
+        bgDarkFull: "#0f172a",
+        darkLight: "#1e293b",
+        violetDark: "#6366f1",
+        blueDark: "#38bdf8"
+      }
     },
     extend: {
        backgroundImage: {

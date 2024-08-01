@@ -5,13 +5,13 @@ import { Building, ChevronDown, LogOut } from "lucide-react";
 export function Account(){
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger asChild className="bg-[#1e293b] text-[#319ed6]">
-                <Button variant="outline" className="flex items-center gap-2 select-none hover:text-[#319ed6]">
+            <DropdownMenuTrigger asChild className="text-[#319ed6]">
+                <Button variant="outline" className="flex items-center gap-2 hover:text-[#319ed6]">
                     Menu
                     <ChevronDown className="h-4 w-4"/>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56 bg-[#1e293b] rounded-md p-6 relative shadow-black shadow-md">
+            <DropdownMenuContent align="end" className="dark:bg-[#030712] w-56 rounded-md bg-white p-6 relative shadow-black shadow-md border border-text-[#319ed6]">
                 <DropdownMenuLabel className="flex flex-col">
                     <span>Brenda Andersen</span>
                     <span className="text-xs font-normal text-muted-foreground">brenda_andersen@protonmail.com</span>

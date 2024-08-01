@@ -1,6 +1,7 @@
 import { Atom } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Account } from "./account-menu";
+import { ThemeToggle } from "./theme-toggle";
 
 export function Header () {
     return (
@@ -11,6 +12,7 @@ export function Header () {
                 </Link>
                 <span className="font-semibold text-[#319ed6]">science.physis</span>
                 <div className="ml-auto flex items-center gap-2">
+                    <ThemeToggle />
                     <Account />
                 </div>
             </div>

@@ -6,7 +6,7 @@ import { AuthLayout } from "./pages/_layouts/auth";
 import { SignUp } from "./pages/auth/sign-up";
 import { Users } from "./pages/app/users/users";
 import { NotFound } from "./components/not-found";
-import { Mechanics } from "./pages/subjects/mechanics";
+import { Mechanics } from "./pages/subjects/mechanics/mechanics";
 
 export const router = createBrowserRouter([
   {

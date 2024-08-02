@@ -1,9 +1,13 @@
-import { Hammer } from "lucide-react";
+import { Hammer  } from "lucide-react"
 
-export function ModernPhysics(){
-
+export function Thermometry(){
+    return (
+        <>
+        </>
+    )
 }
-export function ContentModernPhysics(){
+
+export function ContentThermometry(){
     return <div className="flex flex-row gap-5">
         <div className="w-5 h-5">
             <Hammer  />

@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 //     titles: string[],
 //     descriptions: string[]
 // }
-const titles = ["Mecânica", "Termodinâmica", "Ondulatória", "Óptica", "Eletromagnetismo", "Física Moderna"];
+const titles = ["Mecânica", "Termologia", "Ondulatória", "Óptica", "Eletromagnetismo", "Física Moderna"];
 const descriptions = ["A Mecânica Clássica se refere às três principais formulações da mecânica pré-relativística: a mecânica newtoniana, mecânica lagrangeana e a mecânica hamiltoniana. Estuda o movimento, as variações de energia e as forças que a tuam sobre um corpo.", 
   "Área da Física que estuda diversos fenômenos e sistemas físicos complexos em que podem ocorrer trocas de calor, transformações de energia e variações de temperatura.",
   "Ramo da Física que tem como objeto de estudo as ondas e oscilações. A ondulatória classifica as ondas segundo a natureza, direção e dimensão de propagação. A ondulatória estuda os diferentes tipos de ondas, como as ondas sonoras, as luminosas e as ondas na água.",

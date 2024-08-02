@@ -25,8 +25,8 @@ export function SignUp() {
   
       toast.success('User registered!', {
         action: {
-          label: "Resend",
-          onClick: () => navigate('sign-in')
+          label: "Login",
+          onClick: () => navigate('/sign-in')
         },
       })
     } catch(err){

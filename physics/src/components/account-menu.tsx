@@ -1,6 +1,7 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 import { Button } from "./ui/button";
 import { Building, ChevronDown, LogOut } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Account(){
     return (
@@ -21,10 +22,12 @@ export function Account(){
                     <Building className="w-4 h-4 align-bottom" />
                     <span className="">Seu universo</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="text-rose-500 dark:text-rose-400 flex flex-col-2 gap-2 items-end hover:text-rose-400 pt-2">
-                    <LogOut className="h-4 w-4" />
-                    <span className="">Sair</span>
-                </DropdownMenuItem>
+                <Link to="/sign-in">
+                    <DropdownMenuItem className="text-rose-500 dark:text-rose-400 flex flex-col-2 gap-2 items-end hover:text-rose-400 pt-2">
+                        <LogOut className="h-4 w-4" />
+                        <span className="">Sair</span>
+                    </DropdownMenuItem>
+                </Link>
             </DropdownMenuContent>
         </DropdownMenu>
     )

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { CardStyled } from "../../components/CardStyled";
+import { CardStyled } from "../../components/card-styled";
 
 export function Dashboard() {
   return (

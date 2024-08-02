@@ -32,6 +32,7 @@ module.exports = {
     extend: {
        backgroundImage: {
         'backgroundImage': "url('/images/bg.jpg')",
+        'mechanics': "url('/images/mechanics.jpg')",
       },
       colors: {
         border: "hsl(var(--border))",

@@ -10,12 +10,12 @@ import { Mechanics } from "./pages/subjects/mechanics/mechanics";
 import PrivateRoutes from "./components/private-route";
 
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <PrivateRoutes />,
-    children: [{ path: "/", element: <Dashboard /> },
-    ],
-  },
+  // {
+  //   path: "/",
+  //   element: <PrivateRoutes />,
+  //   children: [{ path: "/", element: <Dashboard /> },
+  //   ],
+  // },
   {
     path: "/",
     element: <AppLayout />,

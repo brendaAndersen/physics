@@ -5,10 +5,11 @@ import { Button } from "../../components/ui/button";
 import { useForm } from "react-hook-form"
 import { z } from "zod";
 import { toast } from "sonner";
-import { Link, redirect } from "react-router-dom";
-// import { signIn } from "../../api/sign-in";
+import { Link } from "react-router-dom";
 import { api } from "../../lib/axios";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./../../context/AuthProvider";
 
 const signInForm = z.object({
   email: z.string().email(),
@@ -19,6 +20,7 @@ type SignInForm = z.infer<typeof signInForm>
 
 export function SignIn() {
   const { register, handleSubmit, formState: { isSubmitting }} = useForm<SignInForm>();
+  const { setAuth } = useContext(AuthContext);
 //  const { mutateAsync: authenticate } = useMutation({
 //     mutationFn: signIn,
 //   })
@@ -26,11 +28,15 @@ export function SignIn() {
 
   async function handleSignIn(data: SignInForm){
     try{
-      console.log(data)
-      api.post('/auth/login', {
+      // await authenticate({email: data.email, password:data.password})
+      await api.post('/auth/login', {
         email: data.email,
         password: data.password
       }).then(async (response) => {
+        console.log(response.data);
+        localStorage.setItem("token", response.data.token);
+        console.log(response.data.token);
+
         toast.success('Success!', {
           action: {
             label: "Ok!",
@@ -41,15 +47,6 @@ export function SignIn() {
       })
       .catch((error) => toast.error("Invalid auth", error)
     )
-      // await authenticate({ email: data.email, password: data.password })
-      // await new Promise((resolve) => setTimeout(resolve, 2000));
-  
-      // toast.success('An email with a auth link was send to you!', {
-      //   action: {
-      //     label: "Resend",
-      //     onClick: () => handleSignIn(data)
-      //   },
-      // })
       
     } catch(err){
       toast.error("Invalid auth")

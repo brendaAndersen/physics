@@ -671,6 +671,18 @@
   resolved "https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.19.1.tgz"
   integrity sha512-2bIrL28PcK3YCqD9anGxDxamxdiJAxA+l7fWIwM5o8UqNy1t3d1NdAweO2XhA0KTDJ5aH1FsuiT5+7VhtHliXg==
 
+"@tanstack/query-core@5.51.21":
+  version "5.51.21"
+  resolved "https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.51.21.tgz"
+  integrity sha512-POQxm42IUp6n89kKWF4IZi18v3fxQWFRolvBA6phNVmA8psdfB1MvDnGacCJdS+EOX12w/CyHM62z//rHmYmvw==
+
+"@tanstack/react-query@^5.51.21":
+  version "5.51.21"
+  resolved "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.51.21.tgz"
+  integrity sha512-Q/V81x3sAYgCsxjwOkfLXfrmoG+FmDhLeHH5okC/Bp8Aaw2c33lbEo/mMcMnkxUPVtB2FLpzHT0tq3c+OlZEbw==
+  dependencies:
+    "@tanstack/query-core" "5.51.21"
+
 "@ts-morph/common@~0.19.0":
   version "0.19.0"
   resolved "https://registry.npmjs.org/@ts-morph/common/-/common-0.19.0.tgz"

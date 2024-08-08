@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
+
 export function Mechanics () {
     return (
         <>
-        <div className="flex relative blur-sm bg-slate-950 bg-scroll bg-center bg-cover bg-mechanics items-center justify-center h-[700px]">
-        </div>
+          <Helmet title="Mecânica" />
+
+            <div className="flex relative blur-sm bg-slate-950 bg-scroll bg-center bg-cover bg-mechanics items-center justify-center h-[700px]">
+            </div>
             <h1 id="title" className="absolute flex items-center justify-center top-[200px] left-[500px] text-[4rem] text-teal-300 font-bold">Mecânica</h1>
        
             <div>

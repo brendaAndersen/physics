@@ -17,13 +17,13 @@ export function Content(){
                 {
                     titles.map((title) => {
                         return <>
-                        <Link className="underline hover:no-underline underline-offset-4 hover:bg-[#319ed6] hover:text-slate-800 rounded-sm" to={title.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toLowerCase()}>
+                        <Link className="underline hover:no-underline underline-offset-4 hover:bg-[#319ed6] hover:text-slate-800 rounded-sm" to={title.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toLowerCase().replace(/\s/g, '-')}>
                             {mechanicsDescriptions[1]}
                         </Link>
-                        <Link className="underline hover:no-underline underline-offset-4 hover:bg-[#319ed6] hover:text-slate-800 rounded-sm" to={title.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toLowerCase()}>
+                        <Link className="underline hover:no-underline underline-offset-4 hover:bg-[#319ed6] hover:text-slate-800 rounded-sm" to={title.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toLowerCase().replace(/\s/g, '-')}>
                             {mechanicsDescriptions[2]}    
                         </Link>
-                        <Link className="underline hover:no-underline underline-offset-4 hover:bg-[#319ed6] hover:text-slate-800 rounded-sm" to={title.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toLowerCase()}>
+                        <Link className="underline hover:no-underline underline-offset-4 hover:bg-[#319ed6] hover:text-slate-800 rounded-sm" to={title.normalize("NFD").replace(/[^a-zA-Z\s]/g, "").toLowerCase().replace(/\s/g, '-')}>
                             {mechanicsDescriptions[3]}
                         </Link>
                         </>

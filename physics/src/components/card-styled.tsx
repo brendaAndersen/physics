@@ -7,10 +7,6 @@ import { ContentThermometry } from "../pages/subjects/thermometry";
 import { ContentWaveMotion } from "../pages/subjects/wave-motion";
 import { ContentElectromagnestism } from "../pages/subjects/electromagnestism";
 
-// type CardStyledProps = {
-//     titles: string[],
-//     descriptions: string[]
-// }
 export const titles = ["Mecânica", "Termologia", "Ondulatória", "Óptica", "Eletromagnetismo", "Física Moderna"];
 const descriptions = ["A Mecânica Clássica se refere às três principais formulações da mecânica pré-relativística: a mecânica newtoniana, mecânica lagrangeana e a mecânica hamiltoniana. Estuda o movimento, as variações de energia e as forças que a tuam sobre um corpo.", 
   "Área da Física que estuda diversos fenômenos e sistemas físicos complexos em que podem ocorrer trocas de calor, transformações de energia e variações de temperatura.",
@@ -20,17 +16,16 @@ const descriptions = ["A Mecânica Clássica se refere às três principais form
   "Física Moderna é a denominação dada ao conjunto de teorias surgidas no começo do século XX, principiando com a Mecânica Quântica e a Teoria da Relatividade e as alterações no entendimento científico daí decorrente."
 ]
 const contents = [<ContentMechanics />, <ContentThermometry />, <ContentWaveMotion />, <ContentElectromagnestism />, <ContentOptics />, <ContentModernPhysics />]
-import { Wrench } from 'lucide-react';
 
 export const CardStyled = () => {
     return (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 desktop:grid-cols-3 gap-6 cursor-pointer">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 p-14 desktop:grid-cols-3 gap-6 cursor-pointer">
             { titles.map((title, index) => {
                 return (
                     <Dialog>
                         <DialogTrigger asChild>
                                 <Card key={index} className="absolutetransform small:h-[350px] small:w-[300px] rounded-xl shadow-xl transition duration-300 hover:scale-105
-                                border-[#319ed6]  text-slate-500 w-[500px] lg:h-[330px] lg:w-[300px] md:h-min-[600px] text-justify">
+                                border-[#319ed6]  text-slate-500 w-[500px] lg:h-[340px] lg:w-[300px] md:h-min-[600px] text-justify">
                                     <CardHeader className="">
                                         <CardTitle className="text-[#319ed6]">{title}</CardTitle>
                                     </CardHeader>
@@ -46,35 +41,5 @@ export const CardStyled = () => {
                 )})
             }
         </div>
-
-        // <div className="flex flex-col gap-4">
-        //     <h1 className="text-3xl font-bold tracking-tight">Principais Matérias</h1>
-        //     <div className="grid grid-cols-4 gap-4">
-        //     {
-        //     titles.map((title, index) => {
-        //      return(
-        //         <>
-                
-        //         <Dialog>
-        //             <DialogTrigger asChild>
-        //                 <Card key={index} className="absolutetransform small:h-[350px] small:w-[300px] rounded-xl shadow-xl transition duration-300 hover:scale-105
-        //                 border-[#319ed6]  text-slate-500 w-[500px] lg:h-[330px] lg:w-[300px] md:h-min-[600px] text-justify">
-        //                     <CardHeader className="">
-        //                         <CardTitle className="text-[#319ed6]">{title}</CardTitle>
-        //                     </CardHeader>
-        //                     <CardContent>
-        //                         {descriptions[index]}
-        //                     </CardContent>
-        //                 </Card>
-        //             </DialogTrigger>
-        //             <DialogContent>
-        //                 {contents[index]}
-        //             </DialogContent>
-        //         </Dialog>
-        //         </>
-        //      )})}
-            
-        //     </div>
-        // </div>
     )
 }

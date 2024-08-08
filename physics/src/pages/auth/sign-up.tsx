@@ -38,12 +38,7 @@ export function SignUp() {
     <>
       <Helmet title="Cadastro" />
       <div className="grid gap-40 p-8">
-        <Button variant="ghost" asChild className="absolute right-8">
-          <Link to="/sign-in">
-          Fazer login
-          </Link>
-        </Button>
-        <div className="flex w-[350px] flex-col justify-center gap-6">
+        <div className="flex lg:w-72 tablet:w-72 small:w-56 md:w-72 flex-col justify-center gap-6">
           <div className="flex flex-col gap-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">Sign Up</h1>
             <p className="text-muted-foreground text-sm">
@@ -109,7 +104,16 @@ export function SignUp() {
               Password
             </label>
             </div>
-            <Button disabled={isSubmitting} className="bg-sky-500 hover:bg-sky-700" type="submit">Create</Button>
+            <div className="grid grid-cols-2 gap-10">
+              <Button disabled={isSubmitting} className="bg-sky-500 hover:bg-sky-700" type="submit">Create</Button>
+              <Button variant="ghost" asChild className="">
+                <Link to="/sign-in">
+                  <p className="text-xs">
+                    Fazer login
+                  </p>
+                </Link>
+              </Button>
+            </div>
           </form>
         </div>
       </div>

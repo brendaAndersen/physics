@@ -47,18 +47,18 @@ export function SignIn() {
   return (
     <>
       <Helmet title="Login" />
-      <div className="p-8">
-        <div className="flex lg:w-72 small:w-32 md:w-56 flex-col justify-center gap-6">
+      <div className="p-8 text-2xl">
+        <div className="flex lg:w-72 tablet:w-72 small:w-56 md:w-72 flex-col justify-center gap-6">
           <div className="flex flex-col gap-2 text-center">
             <div>
-              <h1 className="text-2xl font-semibold tracking-tight">Sign In</h1>
+              <h1 className="font-semibold tracking-tight">Sign In</h1>
               <Button variant="link" asChild className="small:invisible text-sky-500 hover:text-sky-700 absolute right-8 top-8 md:right-[-10px] md:bottom-[260px]">
                 <Link to="/sign-up">
                   New user
                 </Link>
               </Button>
             </div>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground lg:text-lg small:text-2xl">
               think <s>like a proton</s> and stay <s>positive</s> with us!
             </p>
           </div>
@@ -108,12 +108,21 @@ export function SignIn() {
               </label>
             </div>
             </div>
-            <Button disabled={isSubmitting} className="bg-sky-500 hover:bg-sky-700" type="submit">Login</Button>
-            <Button variant="link" asChild className="small:visible text-sky-500 hover:text-sky-700 absolute">
+            <div className="grid grid-cols-2 gap-10">
+              <Button disabled={isSubmitting} 
+                className="bg-sky-500 hover:bg-sky-700" 
+                type="submit"
+              >
+                Login
+              </Button>
+              <Button variant="link" asChild className="small:visible text-sky-500 hover:text-sky-700">
                 <Link to="/sign-up">
-                  New user
+                  <p className="text-xs">
+                    New user
+                  </p>
                 </Link>
               </Button>
+            </div>
           </form>
         </div>
       </div>
